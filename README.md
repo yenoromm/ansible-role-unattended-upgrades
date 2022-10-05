@@ -85,7 +85,7 @@ On some hosts you may find that the unattended-upgrade's cronfile `/etc/cron.dai
     * Default: `false`
 * `unattended_upgrades_syslog_facility`: Write events to the specified syslog facility, or the daemon facility if not specified. Will only have affect if `unattended_upgrades_syslog_enable` is set to `true`.
     * Default: `daemon`
-* `unattended_upgrades_sender`: Define sender address and name. `Example: Unattended-upgrades Hostname <MyName@MyDomain.com>`
+* `unattended_upgrades_sender`: Define sender address and name. Example: `Unattended-upgrades Hostname <MyName@MyDomain.com>`
 * `unattended_upgrades_verbose`: Define verbosity level of APT for periodic runs. The output will be sent to root.
     * Possible options:
       * `0`: no report
