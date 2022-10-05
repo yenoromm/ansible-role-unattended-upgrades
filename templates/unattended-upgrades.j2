@@ -129,6 +129,13 @@ Unattended-Upgrade::SyslogFacility "{{ unattended_upgrades_syslog_facility }}";
 {% endif %}
 {% endif %}
 
+{% if unattended_upgrades_sender is defined %}
+// By default Unattended Upgrades will use "root" as a sender, which can
+// lead to a rejection of the email due to missing or wrong from field.
+// example: Unattended-upgrades Hostname <MyName@MyDomain.com>
+Unattended-Upgrade::Sender "{{ unattended_upgrades_sender }}";
+{% endif %}
+
 {% if unattended_upgrades_dpkg_options %}
 // Append options for governing dpkg behavior, e.g. --force-confdef.
 Dpkg::Options {
